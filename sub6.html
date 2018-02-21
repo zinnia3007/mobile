@@ -1,0 +1,184 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>몰디브 펜션</title>
+    <meta name="Keywords" content="몰디브 펜션, 펜션, 고흥 펜션">
+    <meta name="Subject" content="몰디브 펜션 모바일 홈페이지">
+    <meta name="description" content="시원하게 펼쳐진 바다 풍경을 바라보며 여행의 설레임과 편안함이 함께하는 몰디브펜션을 지금 만나보세요.">
+    <meta name="title" content="몰디브 펜션">
+    <meta name="author" content="changsoo">
+    <link rel="apple-touch-icon-precomposed" href="57x57.png" />
+    <link rel="apple-touch-icon-precomposed" href="72x72.png" />
+    <link rel="apple-touch-icon" href="114x114.png" sizes="114x114" >
+    <link rel="apple-touch-icon" href="144x144.png" sizes="144x144" >
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);">
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!-- 
+        //주소창 자동 닫힘
+        window.addEventListener("load", function(){
+            setTimeout(loaded, 100);
+    }, false);
+        
+        function loaded(){
+            window.scroll(0, 1);
+        }
+        //-->
+        
+    </script>
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#gnb ul li:nth-child(even)').css('background-color', "#48c2ef");
+            $('#gnb ul li:nth-child(odd)').css('backgroundColor', '#3eb0da');
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <script> 
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(34.4542681,127.22165910000001);
+      var mapOptions = {
+        zoom: 17,
+        center: myLatlng
+      }
+      var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: '몰디브펜션'	  //레이블을 바꿔서 입력
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+        * { margin:0; padding:0; }
+        body,html { width:100%; font-family: 'Jeju Gothic', sans-serif; }
+        ul { list-style:none; }
+        a { text-decoration:none; color:#111; }
+        img { border:0; }
+        #contaniner { width:100%; }
+        #hd { width:100%; }
+        .logo { display:block; width:300px; margin:0 auto; }
+        .logo img { display:block; width:100%; }
+        #gnb { width:100%; height:100px; color:#fff; }
+        #gnb ul li { float:left; position:relative; width:20%; text-align:center; padding:5px 0; line-height:35px; }
+        #gnb ul li a { color:#fff; display:block; font-size:14px; }
+        #gnb ul li img { display:block; width:30%; margin:0 auto; }
+        .la { display:block; font-size:14px; }
+        .la img { width:30%; margin:0 auto; }
+        
+        #ck { display:none; }
+        #ck:checked ~ .search_form { height:100px; }
+        .search_form { width:100%; height:0px; background-color:#efefef; overflow:hidden; transition:1s; }
+        .search_box { width:94%; margin:0 auto; padding-top:25px; }
+        .search_form #sch1 { display:block; width:80%; height:50px; float:left; text-indent:10px;  }
+        .search_form #sch2 { display:block; width:50px; height:50px; float:right; text-indent:-99999; background-color:#3eb0da; border:0; background-image:url(./icon/search.png); background-size:24px 24px; background-position:center center; background-repeat:no-repeat; }
+        
+        .content { width:100%; }
+        .con_txt_box { padding:0 15px; }
+        .con_tit1 { font-size:34px; line-height:64px; font-weight:300; color:#48c2ef; }
+        .con_sub_tit { font-size:18px; color:#666; line-height:28px; }
+        .con_comment { font-size:14px; font-weight:400; color:#999;  line-height:24px;}
+        .space { height:25px; }
+        .img_box { width:90%; margin:0 auto; text-align:center; }
+        .img_box .img_link { display:block; }
+        .img_box .img_link img { display:block; width:100%; }
+        .img_box span { font-size:12px; color:#aaa; line-height:24px;}
+        .con_tit4 { line-height:50px; font-weight:300; color:#333; }
+        .img_box .img_link2 { clear:both; }
+        
+        #map_canvas { margin-bottom:40px; }
+        .sub_title1 { font-size:12px; color:#999; font-weight:300; line-height:24px; margin-bottom:20px; }
+
+        #ft { width:100%; background-color:#f5f5f5; padding:50px 0; }
+        .address { width:90%; margin:0 auto; font-size:12px; color:#aaa; text-align:center; }
+        .copyright { font-size:11px; text-align:center; color:#aaa; }
+    </style>
+</head>
+<body onload="initialize()">
+    <div id="container">
+        <header id="hd">
+            <a href="index.html" class="logo">
+                <img src="./img/logo.png" alt="로고">
+            </a>
+        </header>
+        <input type="checkbox" id="ck">
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <label for="ck" class="la">
+                        <span class="gnb_tit">검색</span>
+                        <img src="./icon/search.png" alt="검색">
+                        <span class="gnb_txt">SEARCH</span>
+                    </label>
+                </li>
+                <li>
+                    <a href="menu.html">
+                        <span class="gnb_tit">메뉴</span>
+                        <img src="./icon/menu-button.png" alt="메뉴">
+                        <span class="gnb_txt">MENU</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:010-4608-8304">
+                        <span class="gnb_tit">전화</span>
+                        <img src="./icon/phone-call.png" alt="전화">
+                        <span class="gnb_txt">TEL</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="sms:010-4608-8304">
+                        <span class="gnb_tit">문자</span>
+                        <img src="./icon/speech-bubble.png" alt="문자">
+                        <span class="gnb_txt">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="email:admin@maldive2600.com">
+                        <span class="gnb_tit">이메일</span>
+                        <img src="./icon/envelope.png" alt="이메일">
+                        <span class="gnb_txt">E-MAIL</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search_form">
+            <div class="search_box">
+                <input type="text" id="sch1" placeholder="검색어를 입력해주세요.">
+                <input type="submit" id="sch2">
+            </div>
+        </div>
+        <div class="content">
+            <div class="space"></div>
+            <div class="con_txt_box con_txt_box1">
+                <h2 class="con_tit1">오시는길</h2>
+                <p class="con_sub_tit">전남 고흥군 금산면 거금일주로 1466 몰디브펜션</p>
+            </div>
+            <div class="space"></div>
+            <div class="content_wrap">
+                <section class="row" id="contact">
+                    <p class="sub_title1">소록대교와 거금대교를 지나 4km 정도 직진하면 중촌삼거리가 나옵니다. 거금일주로를 따라 계속해서 직진하여 금장삼거리를 지나10km 정도 오시면 대로변 우측으로 넓은 주차장과 함께 몰디브펜션이 보입니다.</p>
+                    <article class="full_col h600" style="margin-bottom:50px;">
+                        <div id="map_canvas" style="width:320px; height:280px"></div>
+                    </article>
+		        </section>
+            </div>
+            <div class="space"></div>
+        <footer id="ft">
+           <p class="address">
+                    상호:몰디브펜션 <span>|</span> 대표 : 김철만 <span>|</span> 주소: 전남 고흥군 금산면 거금일주로1466 <span>|</span> 사업자등록번호 : 848-31-00240<span>|</span> TEL : 010-4608-8304 <span>|</span> 입금 계좌 : 농협 352-1149-3726-43, 예금주 : 김철만
+                </p>
+                <br/>
+                <p class="copyright">COPYRIGHT@WINGS. ALL RIGHT RESERVED</p> 
+        </footer>
+        </div>
+    </div>
+</body>
+</html>

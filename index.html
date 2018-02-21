@@ -1,0 +1,206 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>몰디브 펜션</title>
+    <meta name="Keywords" content="몰디브 펜션, 펜션, 고흥 펜션">
+    <meta name="Subject" content="몰디브 펜션 모바일 홈페이지">
+    <meta name="description" content="시원하게 펼쳐진 바다 풍경을 바라보며 여행의 설레임과 편안함이 함께하는 몰디브펜션을 지금 만나보세요.">
+    <meta name="title" content="몰디브 펜션">
+    <meta name="author" content="changsoo">
+    <link rel="apple-touch-icon-precomposed" href="57x57.png" />
+    <link rel="apple-touch-icon-precomposed" href="72x72.png" />
+    <link rel="apple-touch-icon" href="114x114.png" sizes="114x114" >
+    <link rel="apple-touch-icon" href="144x144.png" sizes="144x144" >
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);">
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!-- 
+        //주소창 자동 닫힘
+        window.addEventListener("load", function(){
+            setTimeout(loaded, 100);
+    }, false);
+        
+        function loaded(){
+            window.scroll(0, 1);
+        }
+        //-->
+        
+    </script>
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#gnb ul li:nth-child(even)').css('background-color', "#48c2ef");
+            $('#gnb ul li:nth-child(odd)').css('backgroundColor', '#3eb0da');
+        });
+    </script>
+    <script>
+        var idx = 0;
+        var slidemax = 4;
+        var pos = 100;
+
+        function sliding(add) {
+            idx = idx + add;
+            if(idx < 0) idx = slidemax;
+            else if(idx > slidemax) idx = 0;
+            $('.slide').stop().animate({'left' : -(idx*pos)+"%"}, "slow");
+        }
+
+        autoslide = setInterval(function() { sliding(1) }, 3000);
+
+        function after() {
+            setTimeout(function() {
+                clearInterval(autoslide);  
+                autoslide = setInterval(function() { sliding(1) }, 3000);
+            }, 2000);
+        }
+
+        $('#leftbtn, #rightbtn').click(function() {
+            clearInterval(autoslide);  
+            if($(this).attr('id') == "leftbtn") sliding(-1);
+            else sliding(1);
+            after();
+        });
+   
+    </script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+        * { margin:0; padding:0; }
+        body,html { width:100%; font-family: 'Jeju Gothic', sans-serif; }
+        ul { list-style:none; }
+        a { text-decoration:none; color:#111; }
+        img { border:0; }
+        #contaniner { width:100%; }
+        #hd { width:100%; }
+        .logo { width:300px; margin:0 auto; }
+        .logo img { display:block; width:100%; }
+        #gnb { width:100%; height:100px; color:#fff; }
+        #gnb ul li { float:left; position:relative; width:20%; text-align:center; padding:5px 0; line-height:35px; }
+        #gnb ul li a { color:#fff; display:block; font-size:14px; }
+        #gnb ul li img { display:block; width:30%; margin:0 auto; }
+        .la { display:block; font-size:14px; }
+        .la img { width:30%; margin:0 auto; }
+        
+        #ck { display:none; }
+        #ck:checked ~ .search_form { height:100px; }
+        .search_form { width:100%; height:0px; background-color:#efefef; overflow:hidden; transition:1s; }
+        .search_box { width:94%; margin:0 auto; padding-top:25px; }
+        .search_form #sch1 { display:block; width:80%; height:50px; float:left; text-indent:10px;  }
+        .search_form #sch2 { display:block; width:50px; height:50px; float:right; text-indent:-99999; background-color:#3eb0da; border:0; background-image:url(./icon/search.png); background-size:24px 24px; background-position:center center; background-repeat:no-repeat; }
+        
+        .slidebox { width:100%; height:300px; position:relative; overflow:hidden; }
+        .slidebox ul { width:500%; position:absolute; left:0; }
+        .slidebox ul li { display:inline-block; width:20%; float:left; }
+        .slidebox ul li img { display:block; width:100%; }
+        
+        .content { width:100%; }
+        .content_txt { width:90%; margin:0 auto; margin-bottom:60px; }
+        .content_txt_box1 {  }
+        .content_txt_box1 span { font-size:34px; }
+        .content_txt_box1 .con_tit1 { color:#48c2ef; }
+        .content_comment { font-size:14px; color:#999; font-weight:300; line-height:24px; }
+        
+        #ft { width:100%; background-color:#f5f5f5; padding:50px 0; }
+        .address { width:90%; margin:0 auto; font-size:12px; color:#aaa; text-align:center; }
+        .copyright { font-size:11px; text-align:center; color:#aaa; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="hd">
+            <div class="logo">
+                <img src="./img/logo.png" alt="로고">
+            </div>
+        </header>
+        <input type="checkbox" id="ck">
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <label for="ck" class="la">
+                        <span class="gnb_tit">검색</span>
+                        <img src="./icon/search.png" alt="검색">
+                        <span class="gnb_txt">SEARCH</span>
+                    </label>
+                </li>
+                <li>
+                    <a href="menu.html">
+                        <span class="gnb_tit">메뉴</span>
+                        <img src="./icon/menu-button.png" alt="메뉴">
+                        <span class="gnb_txt">MENU</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:010-4608-8304">
+                        <span class="gnb_tit">전화</span>
+                        <img src="./icon/phone-call.png" alt="전화">
+                        <span class="gnb_txt">TEL</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="sms:010-4608-8304">
+                        <span class="gnb_tit">문자</span>
+                        <img src="./icon/speech-bubble.png" alt="문자">
+                        <span class="gnb_txt">SMS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="email:admin@maldive2600.com">
+                        <span class="gnb_tit">이메일</span>
+                        <img src="./icon/envelope.png" alt="이메일">
+                        <span class="gnb_txt">E-MAIL</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="search_form">
+            <div class="search_box">
+                <input type="text" id="sch1" placeholder="검색어를 입력해주세요.">
+                <input type="submit" id="sch2">
+            </div>
+        </div>
+        <div class="slidebox">
+            <ul class="slide">
+                <li>
+                    <img src="./img/main_01.jpg" alt="메인이미지">
+                </li>
+                <li>
+                    <img src="./img/main_02.jpg" alt="메인이미지">
+                </li>
+                <li>
+                    <img src="./img/main_03.jpg" alt="메인이미지">
+                </li>
+                <li>
+                    <img src="./img/main_04.jpg" alt="메인이미지">
+                </li>
+                <li>
+                    <img src="./img/main_05.jpg" alt="메인이미지">
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content_txt">
+                <div class="content_txt_box1">
+                    <span class="con_tit1">파노라마 오션뷰</span>
+                    <br/>
+                    <span class="con_tit2">고흥 몰디브펜션</span>
+                </div>
+                <br>
+                <div class="content_txt_box2">
+                    <p class="content_comment">시원하게 펼쳐진 바다 풍경을 바라보며 여행의 설레임과<br/>편안함이 함께하는 몰디브펜션을 지금 만나보세요</p>
+                </div>
+            </div>
+        </div>
+        <footer id="ft">
+           <p class="address">
+                    상호:몰디브펜션 <span>|</span> 대표 : 김철만 <span>|</span> 주소: 전남 고흥군 금산면 거금일주로1466 <span>|</span> 사업자등록번호 : 848-31-00240<span>|</span> TEL : 010-4608-8304 <span>|</span> 입금 계좌 : 농협 352-1149-3726-43, 예금주 : 김철만
+                </p>
+                <br/>
+                <p class="copyright">COPYRIGHT@WINGS. ALL RIGHT RESERVED</p> 
+        </footer>
+    </div>
+</body>
+</html>
